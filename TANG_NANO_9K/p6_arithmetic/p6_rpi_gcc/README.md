@@ -13,19 +13,20 @@ https://github.com/grughuhler/grug_misc_projects/tree/main/tang_nano_mac_fpga/c
 
 Ці програми використовують бібліотеку pigpio, тому
 
-   ### sudo apt install libpigpio-dev   (На RPI Zero не працює!)
+   ## sudo apt install libpigpio-dev   (На RPI Zero не працює!)
    або
-   ### sudo apt install pigpio
-   ### gcc -o mac_command mac_command.c -lpigpio -lrt
-   ### ./mac_command
+   ## sudo apt install pigpio
+   ## gcc -o mac_command mac_command.c -lpigpio -lrt
+   ## ./mac_command
 
 - Commands:
-  - reset     : Sets all registers (a, b, and c) to zero
-  - write a b : Write decimal values a and b to registers a and b
-  - sum       : Do the c = c + a*b operation
-  - read      : read the value of c
-  - quit      : exit this program
-  - help      : show this help
+|---|---|
+| reset     | Sets all registers (a, b, and c) to zero|
+| write a b | Write decimal values a and b to registers a and b|
+| sum       | Do the c = c + a*b operation|
+| read      | read the value of c|
+| quit      | exit this program|
+| help      | show this help|
 
 mac_command1 використовує один двонаправлений сигнал, 
 тоді як mac_command використовує два однонаправлених сигнали. 
@@ -53,5 +54,6 @@ Raspberry Pi та Tang Nano 9K через резистор 1 кОм. Це пра
 | clk    |  35  |  21  | Yelow  |
 | din    |  40  |  26  | Orange |
 | dout   |  34  |  19  | White  |
+
 
 
