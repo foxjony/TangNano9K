@@ -13,11 +13,11 @@ https://github.com/grughuhler/grug_misc_projects/tree/main/tang_nano_mac_fpga/c
 
 Ці програми використовують бібліотеку pigpio, тому
 
-   #### sudo apt install libpigpio-dev   (На RPI Zero не працює!)
+   ### sudo apt install libpigpio-dev   (На RPI Zero не працює!)
    або
-   #### sudo apt install pigpio
-   #### gcc -o mac_command mac_command.c -lpigpio -lrt
-   #### ./mac_command
+   ### sudo apt install pigpio
+   ### gcc -o mac_command mac_command.c -lpigpio -lrt
+   ### ./mac_command
 
 Commands:
   reset     : Sets all registers (a, b, and c) to zero
@@ -46,14 +46,11 @@ Raspberry Pi та Tang Nano 9K через резистор 1 кОм. Це пра
 може забезпечити захист, коли обидва виходи є результатом помилки. 
 Але, все ж, уникайте конфлікту виходів. Використання резистора є параноя.
 
-'''
----------------------------
-        FPGA   RPI   Color
----------------------------
-cmd[0]   42    16    Blue
-cmd[1]   41    20    Green
-clk      35    21    Yelow
-din      40    26    Orange
-dout     34    19    White
----------------------------
-'''
+|        | FPGA | RPI  | Color  |
+|--------|------|------|--------|
+| cmd[0] |  42  |  16  | Blue   |
+| cmd[1] |  41  |  20  | Green  |
+| clk    |  35  |  21  | Yelow  |
+| din    |  40  |  26  | Orange |
+| dout   |  34  |  19  | White  |
+
