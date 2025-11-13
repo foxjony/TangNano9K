@@ -1,5 +1,5 @@
 Arithmetic (from Shift Registers) Using the Tang Nano 9K FPGA Board
-https://www.youtube.com/watch?v=qTdrYL4ayPM
+- https://www.youtube.com/watch?v=qTdrYL4ayPM
 
 https://github.com/grughuhler/grug_misc_projects/tree/main/tang_nano_mac_fpga/c
 
@@ -55,6 +55,7 @@ Raspberry Pi та Tang Nano 9K через резистор 1 кОм. Це пра
 | clk    |  35  |  21  | Yelow  |
 | din    |  40  |  26  | Orange |
 | dout   |  34  |  19  | White  |
+
 
 
 
