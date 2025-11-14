@@ -1,0 +1,399 @@
+{
+  "creator": "Next Generation Place and Route (Version nextpnr-0.9-40-g69facd7c)",
+  "modules": {
+    "top": {
+      "settings": {
+        "route": "00000000000000000000000000000001",
+        "router/tmg_ripup": "0 ",
+        "router1/useEstimate": "1 ",
+        "router1/fullCleanupReroute": "1 ",
+        "router1/cleanupReroute": "1 ",
+        "router1/maxIterCnt": "200",
+        "place": "00000000000000000000000000000001",
+        "placer1/startTemp": "1.000000",
+        "placer1/minBelsForGridPick": "64",
+        "placer1/netShareWeight": "0.000000",
+        "placer1/constraintWeight": "10.000000",
+        "placerHeap/cellPlacementTimeout": "8",
+        "placerHeap/netShareWeight": "0.000000",
+        "placerHeap/parallelRefine": "0 ",
+        "pack": "00000000000000000000000000000001",
+        "synth": "00000000000000000000000000000001",
+        "placerHeap/timingWeight": "10 ",
+        "placerHeap/criticalityExponent": "2",
+        "placerHeap/beta": "0.900000",
+        "placerHeap/alpha": "0.100000",
+        "seed": "0011000101000001010110010010011001010011010110001001011110010011",
+        "arch.type": " ",
+        "arch.name": "ARCHNAME",
+        "router": "router1",
+        "placer": "heap",
+        "auto_freq": "00000000000000000000000000000000",
+        "slack_redist_iter": "00000000000000000000000000000000",
+        "timing_driven": "00000000000000000000000000000001",
+        "target_freq": "27000000.000000",
+        "cst.filename": "d:\\vscode_workspace\\FPGA\\TANG_NANO_9K\\p7_sha256\\tangnano9k.cst",
+        "packer.partno": "GW1NR-LV9QN88PC6/I5",
+        "packer.chipdb": "GW1N-9C",
+        "packer.arch": "himbaechel/gowin"
+      },
+      "attributes": {
+        "top": "00000000000000000000000000000001",
+        "src": "d:\\vscode_workspace\\FPGA\\TANG_NANO_9K\\p7_sha256\\top.v:3.1-55.10"
+      },
+      "ports": {
+        "led": {
+          "direction": "output",
+          "bits": [ 9214, 9212, 9210, 9208, 9206, 9204 ]
+        },
+        "clk": {
+          "direction": "input",
+          "bits": [ 7603 ]
+        },
+        "btn1": {
+          "direction": "input",
+          "bits": [ 7602 ]
+        }
+      },
+      "cells": {
+        "GSR": {
+          "hide_name": 0,
+          "type": "GSR",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X0Y0/GSR"
+          },
+          "port_directions": {
+            "GSRI": "input"
+          },
+          "connections": {
+            "GSRI": [ 9232 ]
+          }
+        },
+        "$PACKER_VCC_DRV": {
+          "hide_name": 1,
+          "type": "GOWIN_VCC",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X0Y0/VCC"
+          },
+          "port_directions": {
+            "V": "output"
+          },
+          "connections": {
+            "V": [ 9232 ]
+          }
+        },
+        "u.clk_IBUF_O": {
+          "hide_name": 0,
+          "type": "IBUF",
+          "parameters": {
+            "NET_I": "NET",
+            "NET_O": "NET"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000101",
+            "NEXTPNR_BEL": "X46Y16/IOBA",
+            "src": "d:\\vscode_workspace\\FPGA\\TANG_NANO_9K\\p7_sha256\\top.v:4.16-4.19",
+            "&IO_TYPE=LVCMOS33": "00000000000000000000000000000001",
+            "&PULL_MODE=UP": "00000000000000000000000000000001",
+            "keep": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "O": "output",
+            "I": "input"
+          },
+          "connections": {
+            "O": [ 9217 ],
+            "I": [ 7603 ]
+          }
+        },
+        "led_OBUF_O_5": {
+          "hide_name": 0,
+          "type": "OBUF",
+          "parameters": {
+            "NET_I": "VCC",
+            "NET_O": "NET"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000101",
+            "NEXTPNR_BEL": "X0Y14/IOBA",
+            "src": "d:\\vscode_workspace\\FPGA\\TANG_NANO_9K\\p7_sha256\\top.v:6.22-6.25",
+            "&DRIVE=8": "00000000000000000000000000000001",
+            "&IO_TYPE=LVCMOS18": "00000000000000000000000000000001",
+            "keep": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "O": "output",
+            "I": "input"
+          },
+          "connections": {
+            "O": [ 9214 ],
+            "I": [ 9232 ]
+          }
+        },
+        "led_OBUF_O_4": {
+          "hide_name": 0,
+          "type": "OBUF",
+          "parameters": {
+            "NET_I": "VCC",
+            "NET_O": "NET"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000101",
+            "NEXTPNR_BEL": "X0Y15/IOBB",
+            "src": "d:\\vscode_workspace\\FPGA\\TANG_NANO_9K\\p7_sha256\\top.v:6.22-6.25",
+            "&DRIVE=8": "00000000000000000000000000000001",
+            "&IO_TYPE=LVCMOS18": "00000000000000000000000000000001",
+            "keep": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "O": "output",
+            "I": "input"
+          },
+          "connections": {
+            "O": [ 9212 ],
+            "I": [ 9232 ]
+          }
+        },
+        "led_OBUF_O_3": {
+          "hide_name": 0,
+          "type": "OBUF",
+          "parameters": {
+            "NET_I": "VCC",
+            "NET_O": "NET"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000101",
+            "NEXTPNR_BEL": "X0Y20/IOBB",
+            "src": "d:\\vscode_workspace\\FPGA\\TANG_NANO_9K\\p7_sha256\\top.v:6.22-6.25",
+            "&DRIVE=8": "00000000000000000000000000000001",
+            "&IO_TYPE=LVCMOS18": "00000000000000000000000000000001",
+            "keep": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "O": "output",
+            "I": "input"
+          },
+          "connections": {
+            "O": [ 9210 ],
+            "I": [ 9232 ]
+          }
+        },
+        "led_OBUF_O_2": {
+          "hide_name": 0,
+          "type": "OBUF",
+          "parameters": {
+            "NET_I": "VCC",
+            "NET_O": "NET"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000101",
+            "NEXTPNR_BEL": "X0Y21/IOBB",
+            "src": "d:\\vscode_workspace\\FPGA\\TANG_NANO_9K\\p7_sha256\\top.v:6.22-6.25",
+            "&DRIVE=8": "00000000000000000000000000000001",
+            "&IO_TYPE=LVCMOS18": "00000000000000000000000000000001",
+            "keep": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "O": "output",
+            "I": "input"
+          },
+          "connections": {
+            "O": [ 9208 ],
+            "I": [ 9232 ]
+          }
+        },
+        "led_OBUF_O_1": {
+          "hide_name": 0,
+          "type": "OBUF",
+          "parameters": {
+            "NET_I": "VCC",
+            "NET_O": "NET"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000101",
+            "NEXTPNR_BEL": "X0Y24/IOBB",
+            "src": "d:\\vscode_workspace\\FPGA\\TANG_NANO_9K\\p7_sha256\\top.v:6.22-6.25",
+            "&DRIVE=8": "00000000000000000000000000000001",
+            "&IO_TYPE=LVCMOS18": "00000000000000000000000000000001",
+            "keep": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "O": "output",
+            "I": "input"
+          },
+          "connections": {
+            "O": [ 9206 ],
+            "I": [ 9232 ]
+          }
+        },
+        "led_OBUF_O": {
+          "hide_name": 0,
+          "type": "OBUF",
+          "parameters": {
+            "NET_I": "VCC",
+            "NET_O": "NET"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000101",
+            "NEXTPNR_BEL": "X0Y25/IOBB",
+            "src": "d:\\vscode_workspace\\FPGA\\TANG_NANO_9K\\p7_sha256\\top.v:6.22-6.25",
+            "&DRIVE=8": "00000000000000000000000000000001",
+            "&IO_TYPE=LVCMOS18": "00000000000000000000000000000001",
+            "keep": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "O": "output",
+            "I": "input"
+          },
+          "connections": {
+            "O": [ 9204 ],
+            "I": [ 9232 ]
+          }
+        },
+        "$PACKER_GND_DRV": {
+          "hide_name": 1,
+          "type": "GOWIN_GND",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000010",
+            "NEXTPNR_BEL": "X0Y0/GND"
+          },
+          "port_directions": {
+            "G": "output"
+          },
+          "connections": {
+            "G": [ 9233 ]
+          }
+        },
+        "btn1_IBUF_I": {
+          "hide_name": 0,
+          "type": "IBUF",
+          "parameters": {
+            "NET_I": "NET",
+            "NET_O": "NET"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000101",
+            "NEXTPNR_BEL": "X1Y0/IOBA",
+            "src": "d:\\vscode_workspace\\FPGA\\TANG_NANO_9K\\p7_sha256\\top.v:5.16-5.20",
+            "&IO_TYPE=LVCMOS18": "00000000000000000000000000000001",
+            "keep": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "O": "output",
+            "I": "input"
+          },
+          "connections": {
+            "O": [ 7607 ],
+            "I": [ 7602 ]
+          }
+        }
+      },
+      "netnames": {
+        "$PACKER_VCC": {
+          "hide_name": 1,
+          "bits": [ 9232 ] ,
+          "attributes": {
+            "ROUTING": "X0Y20/S260;X0Y20/S260/VCC;1;X0Y20/D1;X0Y20/D1/S260;1;X0Y0/W240;X0Y0/W240/VCC;1;X0Y0/C4;X0Y0/C4/E241;1;X0Y15/W220;X0Y15/W220/VCC;1;X0Y15/D1;X0Y15/D1/E221;1;X0Y24/E270;X0Y24/E270/VCC;1;X0Y24/D1;X0Y24/D1/E270;1;X0Y14/N200;X0Y14/N200/VCC;1;X0Y14/A0;X0Y14/A0/N200;1;X0Y21/E270;X0Y21/E270/VCC;1;X0Y21/D1;X0Y21/D1/E270;1;X0Y0/VCC;;1;X0Y25/E270;X0Y25/E270/VCC;1;X0Y25/D1;X0Y25/D1/E270;1"
+          }
+        },
+        "u.clk": {
+          "hide_name": 0,
+          "bits": [ 9217 ] ,
+          "attributes": {
+            "ROUTING": " ",
+            "unused_bits": "0 ",
+            "src": "d:\\vscode_workspace\\FPGA\\TANG_NANO_9K\\p7_sha256\\sha256.v:282.12-282.15",
+            "hdlname": "u hash_out clk"
+          }
+        },
+        "clk": {
+          "hide_name": 0,
+          "bits": [ 7603 ] ,
+          "attributes": {
+            "ROUTING": " ",
+            "src": "d:\\vscode_workspace\\FPGA\\TANG_NANO_9K\\p7_sha256\\top.v:4.16-4.19"
+          }
+        },
+        "led[0]": {
+          "hide_name": 0,
+          "bits": [ 9214 ] ,
+          "attributes": {
+            "ROUTING": " ",
+            "src": "d:\\vscode_workspace\\FPGA\\TANG_NANO_9K\\p7_sha256\\top.v:6.22-6.25"
+          }
+        },
+        "led[1]": {
+          "hide_name": 0,
+          "bits": [ 9212 ] ,
+          "attributes": {
+            "ROUTING": " ",
+            "src": "d:\\vscode_workspace\\FPGA\\TANG_NANO_9K\\p7_sha256\\top.v:6.22-6.25"
+          }
+        },
+        "led[2]": {
+          "hide_name": 0,
+          "bits": [ 9210 ] ,
+          "attributes": {
+            "ROUTING": " ",
+            "src": "d:\\vscode_workspace\\FPGA\\TANG_NANO_9K\\p7_sha256\\top.v:6.22-6.25"
+          }
+        },
+        "led[3]": {
+          "hide_name": 0,
+          "bits": [ 9208 ] ,
+          "attributes": {
+            "ROUTING": " ",
+            "src": "d:\\vscode_workspace\\FPGA\\TANG_NANO_9K\\p7_sha256\\top.v:6.22-6.25"
+          }
+        },
+        "led[4]": {
+          "hide_name": 0,
+          "bits": [ 9206 ] ,
+          "attributes": {
+            "ROUTING": " ",
+            "src": "d:\\vscode_workspace\\FPGA\\TANG_NANO_9K\\p7_sha256\\top.v:6.22-6.25"
+          }
+        },
+        "led[5]": {
+          "hide_name": 0,
+          "bits": [ 9204 ] ,
+          "attributes": {
+            "ROUTING": " ",
+            "src": "d:\\vscode_workspace\\FPGA\\TANG_NANO_9K\\p7_sha256\\top.v:6.22-6.25"
+          }
+        },
+        "$PACKER_GND": {
+          "hide_name": 1,
+          "bits": [ 9233 ] ,
+          "attributes": {
+            "ROUTING": " "
+          }
+        },
+        "btn1_IBUF_I_O": {
+          "hide_name": 0,
+          "bits": [ 7607 ] ,
+          "attributes": {
+            "ROUTING": " ",
+            "unused_bits": "0 "
+          }
+        },
+        "btn1": {
+          "hide_name": 0,
+          "bits": [ 7602 ] ,
+          "attributes": {
+            "ROUTING": " ",
+            "src": "d:\\vscode_workspace\\FPGA\\TANG_NANO_9K\\p7_sha256\\top.v:5.16-5.20"
+          }
+        }
+      }
+    }
+  }
+}
